@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UserNotifications
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
         
-    }
+    
         // Do any additional setup after loading the view, typically from a nib.
     }
 
