@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lvL-Cv-3K7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yap-WS-fzD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--home-->
+        <!--HOME-->
         <scene sceneID="nF0-1i-RmH">
             <objects>
                 <viewController id="lvL-Cv-3K7" customClass="HomeViewController" customModule="travenire" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,11 +68,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="wqm-cN-0Jc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="home" id="eiU-dJ-vsw"/>
+                    <navigationItem key="navigationItem" title="HOME" id="hHh-Nb-nel"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Niw-Z7-KeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="296"/>
+            <point key="canvasLocation" x="1087.2" y="295.50224887556226"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="FoD-g6-l8O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yap-WS-fzD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="home" id="eiU-dJ-vsw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywF-Fj-9iM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lvL-Cv-3K7" kind="relationship" relationship="rootViewController" id="46l-h5-PfM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6r1-9R-ZN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="296"/>
         </scene>
     </scenes>
 </document>

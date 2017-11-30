@@ -9,36 +9,49 @@
 import UIKit
 
 struct Article {
-    var title: String
-    var content: String
     var img: String
+    var site: String
     static func fetchData()-> [Article]{
         var article: [Article] = []
-        article.append(Article(title: "gonteng", content: "article", img: "indo"))
+        article.append(Article(img: "indo" , site : "index.html"))
+        article.append(Article(img: "indo", site: "index1.html"))
         return article
     }
 }
 
 class articleTableViewCell: UITableViewCell {
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var content: UILabel!
     @IBOutlet weak var img: UIImageView!
-    
 }
 
 class ArticleViewControler: UIViewController{
     @IBOutlet weak var articleTableView: UITableView!
+    @IBOutlet weak var contactUsView: UIView!
+    @IBAction func contactUs(_ sender: UIButton) {
+        contactUsView.isHidden = false
+        self.articleTableView.isUserInteractionEnabled = false
+    }
+    
+    @IBAction func close(_ sender: UIButton) {
+        self.articleTableView.isUserInteractionEnabled = true
+        contactUsView.isHidden = true
+    }
+    
     var data: [Article] = Article.fetchData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        contactUsView.isHidden = true
         // Do any additional setup after loading the view.
     }
 }
+var web: [String] = []
+var cnt: Int = 0
 class ArticleContentViewControler: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL (string: "http://travel.kompas.com/read/2017/10/28/072200127/5-obyek-wisata-bogor-yang-kekinian")
+        let site = ("http://travenire.site11.com/\(web[cnt])")
+        let url = URL (string: site)
         let requestObj = URLRequest(url: url!)
         webView.loadRequest(requestObj)
     }
@@ -54,14 +67,13 @@ extension ArticleViewControler: UITableViewDataSource,UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for : indexPath) as! articleTableViewCell
-        cell.title.text = data[indexPath.row].title
-        cell.content.text = data[indexPath.row].content
         cell.img.image = UIImage(named: data[indexPath.row].img)
+        web.append(data[indexPath.row].site)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath.row == 0){
-            performSegue(withIdentifier: "segue1", sender: nil)
-        }
+        cnt = indexPath.row
+        performSegue(withIdentifier: "segue1", sender: nil)
+
     }
 }
