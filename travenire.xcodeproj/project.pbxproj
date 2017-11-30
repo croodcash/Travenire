@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D35DDEB1FD0046000006352 /* travenire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D35DDE91FD0046000006352 /* travenire.xcdatamodeld */; };
 		9D54B63D1FCD0D2300F47122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B63C1FCD0D2300F47122 /* AppDelegate.swift */; };
 		9D54B63F1FCD0D2300F47122 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B63E1FCD0D2300F47122 /* mainViewController.swift */; };
 		9D54B6421FCD0D2300F47122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D54B6401FCD0D2300F47122 /* Main.storyboard */; };
@@ -20,10 +21,10 @@
 		9D775E9E1FCDAC1100B96803 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D775E9D1FCDAC1100B96803 /* HomeViewController.swift */; };
 		9D775EA01FCDAC2B00B96803 /* UniqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D775E9F1FCDAC2B00B96803 /* UniqueViewController.swift */; };
 		9DD6A88E1FCFEBEE00013A15 /* unique.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6A88C1FCFEBEE00013A15 /* unique.xcdatamodeld */; };
-		9DD6A8911FCFEC4600013A15 /* unique.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6A88F1FCFEC4600013A15 /* unique.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D35DDEA1FD0046000006352 /* travenire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = travenire.xcdatamodel; sourceTree = "<group>"; };
 		9D54B6391FCD0D2300F47122 /* travenire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travenire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D54B63C1FCD0D2300F47122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D54B63E1FCD0D2300F47122 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		9D775E9D1FCDAC1100B96803 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9D775E9F1FCDAC2B00B96803 /* UniqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueViewController.swift; sourceTree = "<group>"; };
 		9DD6A88D1FCFEBEE00013A15 /* unique.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = unique.xcdatamodel; sourceTree = "<group>"; };
-		9DD6A8901FCFEC4600013A15 /* unique.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = unique.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				9D775E8F1FCD6A3000B96803 /* ArticleViewControler.swift */,
 				9D775E9D1FCDAC1100B96803 /* HomeViewController.swift */,
 				9D775E9F1FCDAC2B00B96803 /* UniqueViewController.swift */,
-				9DD6A88F1FCFEC4600013A15 /* unique.xcdatamodeld */,
+				9D35DDE91FD0046000006352 /* travenire.xcdatamodeld */,
 				9D54B6431FCD0D2300F47122 /* Assets.xcassets */,
 				9D54B6481FCD0D2300F47122 /* Info.plist */,
 			);
@@ -192,8 +192,8 @@
 				9D54B63F1FCD0D2300F47122 /* mainViewController.swift in Sources */,
 				9D775EA01FCDAC2B00B96803 /* UniqueViewController.swift in Sources */,
 				9D54B63D1FCD0D2300F47122 /* AppDelegate.swift in Sources */,
+				9D35DDEB1FD0046000006352 /* travenire.xcdatamodeld in Sources */,
 				9DD6A88E1FCFEBEE00013A15 /* unique.xcdatamodeld in Sources */,
-				9DD6A8911FCFEC4600013A15 /* unique.xcdatamodeld in Sources */,
 				9D775E9E1FCDAC1100B96803 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,22 +397,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		9D35DDE91FD0046000006352 /* travenire.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9D35DDEA1FD0046000006352 /* travenire.xcdatamodel */,
+			);
+			currentVersion = 9D35DDEA1FD0046000006352 /* travenire.xcdatamodel */;
+			path = travenire.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		9DD6A88C1FCFEBEE00013A15 /* unique.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				9DD6A88D1FCFEBEE00013A15 /* unique.xcdatamodel */,
 			);
 			currentVersion = 9DD6A88D1FCFEBEE00013A15 /* unique.xcdatamodel */;
-			path = unique.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		9DD6A88F1FCFEC4600013A15 /* unique.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9DD6A8901FCFEC4600013A15 /* unique.xcdatamodel */,
-			);
-			currentVersion = 9DD6A8901FCFEC4600013A15 /* unique.xcdatamodel */;
 			path = unique.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
