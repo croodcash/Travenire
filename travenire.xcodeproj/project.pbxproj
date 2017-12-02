@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D35DDEB1FD0046000006352 /* travenire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D35DDE91FD0046000006352 /* travenire.xcdatamodeld */; };
+		9D35DDED1FD3057600006352 /* UnqContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35DDEC1FD3057600006352 /* UnqContentView.swift */; };
 		9D54B63D1FCD0D2300F47122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B63C1FCD0D2300F47122 /* AppDelegate.swift */; };
 		9D54B63F1FCD0D2300F47122 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B63E1FCD0D2300F47122 /* mainViewController.swift */; };
 		9D54B6421FCD0D2300F47122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D54B6401FCD0D2300F47122 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		9D35DDEA1FD0046000006352 /* travenire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = travenire.xcdatamodel; sourceTree = "<group>"; };
+		9D35DDEC1FD3057600006352 /* UnqContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnqContentView.swift; sourceTree = "<group>"; };
 		9D54B6391FCD0D2300F47122 /* travenire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travenire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D54B63C1FCD0D2300F47122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D54B63E1FCD0D2300F47122 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				9D775E8F1FCD6A3000B96803 /* ArticleViewControler.swift */,
 				9D775E9D1FCDAC1100B96803 /* HomeViewController.swift */,
 				9D775E9F1FCDAC2B00B96803 /* UniqueViewController.swift */,
+				9D35DDEC1FD3057600006352 /* UnqContentView.swift */,
 				9D35DDE91FD0046000006352 /* travenire.xcdatamodeld */,
 				9D54B6431FCD0D2300F47122 /* Assets.xcassets */,
 				9D54B6481FCD0D2300F47122 /* Info.plist */,
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D775E901FCD6A3000B96803 /* ArticleViewControler.swift in Sources */,
+				9D35DDED1FD3057600006352 /* UnqContentView.swift in Sources */,
 				9D54B63F1FCD0D2300F47122 /* mainViewController.swift in Sources */,
 				9D775EA01FCDAC2B00B96803 /* UniqueViewController.swift in Sources */,
 				9D54B63D1FCD0D2300F47122 /* AppDelegate.swift in Sources */,

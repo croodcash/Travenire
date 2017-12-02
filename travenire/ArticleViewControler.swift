@@ -13,8 +13,10 @@ struct Article {
     var site: String
     static func fetchData()-> [Article]{
         var article: [Article] = []
-        article.append(Article(img: "indo" , site : "index.html"))
-        article.append(Article(img: "indo", site: "index1.html"))
+        article.append(Article(img: "Feed1" , site : "index.html"))
+        article.append(Article(img: "Feed2", site: "index1.html"))
+        article.append(Article(img: "Feed3" , site : "index2.html"))
+        article.append(Article(img: "Feed4", site: "index3.html"))
         return article
     }
 }
@@ -38,6 +40,7 @@ class ArticleViewControler: UIViewController{
     
     var data: [Article] = Article.fetchData()
     
+    @IBOutlet weak var contUs: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         contactUsView.isHidden = true
