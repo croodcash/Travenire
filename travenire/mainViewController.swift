@@ -9,10 +9,28 @@
 import UIKit
 import UserNotifications
 class mainViewController: UIViewController {
-
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
+    
+    @objc func loadSplashScreen(){
+        performSegue(withIdentifier: "goToHome", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (didAllow, error) in
+    /* CODE FOR LOADING SCREEN */
+        DispatchQueue.global().async {
+            for index in 0...3 {
+                DispatchQueue.main.async {
+                    self.loadingSpinner.startAnimating()
+                }
+                sleep(1)
+            }
+        }
+        
+    perform(#selector(self.loadSplashScreen), with: nil, afterDelay: 3)
+    /* FINISHED LOADING SCREEN */
+        
+    UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (didAllow, error) in
         }
         let content = UNMutableNotificationContent()
         content.title = "Travenire"
@@ -27,7 +45,7 @@ class mainViewController: UIViewController {
     
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
 
 
 }
