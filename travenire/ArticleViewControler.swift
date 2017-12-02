@@ -14,7 +14,10 @@ struct Article {
     var img: String
     static func fetchData()-> [Article]{
         var article: [Article] = []
-        article.append(Article(title: "gonteng", content: "article", img: "indo"))
+        article.append(Article(title: "gonteng", content: "index.html", img: "Feed1 copy2.png"))
+        article.append(Article(title: "dua", content: "index1.html", img: "Feed2.png"))
+        article.append(Article(title: "tiga", content: "index2.html", img: "Feed3.png"))
+        article.append(Article(title: "empat", content: "index3.html", img: "Feed4.png"))
         return article
     }
 }
