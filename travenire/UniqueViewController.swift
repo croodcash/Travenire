@@ -110,11 +110,9 @@ extension UniqueViewController: UITableViewDataSource,UITableViewDelegate{
         
         if data[indexPath.row+4].type == "craft"{
             craftCell.craftImg.image = UIImage(named: data[indexPath.row+4].img)
-            print("aaa")
         }
         if data[indexPath.row].type == "food"{
             foodCell.foodImg.image = UIImage(named: data[indexPath.row].img)
-            print("bbb")
         }
         if tableView == tabelViewFood{
             return foodCell
@@ -122,7 +120,13 @@ extension UniqueViewController: UITableViewDataSource,UITableViewDelegate{
             return craftCell
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segueUnique", sender: nil)
+        if tabelViewFood.isHidden == false{
+            appDelegate.code = indexPath.row
+        }else{
+            appDelegate.code = indexPath.row+4
+        }
     }
 }

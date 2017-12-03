@@ -63,7 +63,7 @@
         <scene sceneID="BUF-xH-5y3">
             <objects>
                 <viewControllerPlaceholder storyboardName="article" id="xgk-GQ-WMK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ujK-NH-42i"/>
+                    <tabBarItem key="tabBarItem" title="Article" landscapeImage="HOME_ICON" id="ujK-NH-42i"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAg-PZ-ojw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +73,7 @@
         <scene sceneID="iHF-GY-OoJ">
             <objects>
                 <viewControllerPlaceholder storyboardName="home" id="Dnd-qm-wzg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Win-am-qC5"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="LOCATION_ICON" id="Win-am-qC5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KO-pC-GY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +83,7 @@
         <scene sceneID="XRt-5Q-Op0">
             <objects>
                 <viewControllerPlaceholder storyboardName="unique" id="QjM-2i-V9t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WTm-zk-MLd"/>
+                    <tabBarItem key="tabBarItem" title="Unique" image="UNIQUE_ICON" id="WTm-zk-MLd"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJO-mK-4m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +91,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HOME_ICON" width="64" height="64"/>
         <image name="LAUNCH_SCREEN" width="760" height="1358"/>
+        <image name="LOCATION_ICON" width="64" height="64"/>
+        <image name="UNIQUE_ICON" width="64" height="64"/>
     </resources>
 </document>
