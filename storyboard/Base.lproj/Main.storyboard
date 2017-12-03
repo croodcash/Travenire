@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-KX-Gjs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LAUNCH_SCREEN" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-KX-Gjs">
                                 <rect key="frame" x="-11" y="-16" width="393" height="698"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -91,6 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreen" width="760" height="1358"/>
+        <image name="LAUNCH_SCREEN" width="760" height="1358"/>
     </resources>
 </document>
