@@ -12,6 +12,7 @@ struct Unique {
     var code: Int
     var img: String
     var type: String
+    var cnt: Int
 }
 
 class foodTableViewCell: UITableViewCell{
@@ -65,9 +66,14 @@ class UniqueViewController: UIViewController {
         let dataFetch = NSFetchRequest<NSManagedObject>(entityName: "Data")
         do {
             let unq: [NSManagedObject] = try cont.fetch(dataFetch)
+            var i = 0
             for u in unq {
-                print(u.value(forKey: "name") as! String)
-                data.append(Unique(code: u.value(forKey: "code") as! Int, img: u.value(forKey: "name") as! String , type: String(describing: u.value(forKey: "type")!)))
+                i += 1
+                if i == 5 || i == 6 {
+                data.append(Unique(code: u.value(forKey: "code") as! Int, img: u.value(forKey: "name") as! String , type: String(describing: u.value(forKey: "type")!), cnt: 3))
+                }else{
+                    data.append(Unique(code: u.value(forKey: "code") as! Int, img: u.value(forKey: "name") as! String , type: String(describing: u.value(forKey: "type")!), cnt: 4))
+                }
             }
         } catch let error as NSError {
             print(error)
@@ -123,10 +129,12 @@ extension UniqueViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segueUnique", sender: nil)
-        if tabelViewFood.isHidden == false{
+        if tabelViewFood.isHidden == false {
             appDelegate.code = indexPath.row
+            appDelegate.cnt = data[indexPath.row].cnt
         }else{
             appDelegate.code = indexPath.row+4
+            appDelegate.cnt = data[indexPath.row+4].cnt
         }
     }
 }

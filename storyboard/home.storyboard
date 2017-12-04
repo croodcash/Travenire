@@ -13,7 +13,7 @@
         <!--MAP-->
         <scene sceneID="nF0-1i-RmH">
             <objects>
-                <viewController id="lvL-Cv-3K7" customClass="HomeViewController" customModule="travenire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lvL-Cv-3K7" customClass="MapViewController" customModule="travenire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5m-T4-PHw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,11 +26,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tpX-Qx-79t">
-                                <rect key="frame" x="16" y="66" width="343" height="221"/>
+                                <rect key="frame" x="16" y="104" width="343" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8S-Lr-enu">
-                                <rect key="frame" x="0.0" y="295" width="375" height="323"/>
+                                <rect key="frame" x="0.0" y="343" width="375" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -64,11 +64,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nearest Souvenire Location: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjX-2W-RpR">
+                                <rect key="frame" x="0.0" y="295" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="wqm-cN-0Jc"/>
                     </view>
                     <navigationItem key="navigationItem" title="MAP" id="hHh-Nb-nel"/>
+                    <connections>
+                        <outlet property="mapView" destination="tpX-Qx-79t" id="oXd-hQ-nSZ"/>
+                        <outlet property="storeTableView" destination="N8S-Lr-enu" id="0Zc-9h-ATc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Niw-Z7-KeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,11 +89,12 @@
         <scene sceneID="FoD-g6-l8O">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yap-WS-fzD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="LOCATION_ICON" id="eiU-dJ-vsw"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="eiU-dJ-vsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywF-Fj-9iM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -95,6 +107,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LOCATION_ICON" width="64" height="64"/>
+        <image name="map" width="24" height="24"/>
     </resources>
 </document>

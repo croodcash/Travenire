@@ -11,6 +11,7 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var code:Int?
+    var cnt: Int?
     var window: UIWindow?
 
 

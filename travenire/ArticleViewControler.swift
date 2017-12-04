@@ -41,9 +41,11 @@ class ArticleViewControler: UIViewController{
     var data: [Article] = Article.fetchData()
     
     @IBOutlet weak var contUs: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contactUsView.isHidden = true
+        contUs.image = UIImage(named: "ContactUs")
         // Do any additional setup after loading the view.
     }
 }

@@ -8,10 +8,14 @@
 
 import UIKit
 import CoreData
+class UnqCell: UITableViewCell {
+    @IBOutlet weak var unqCellImg: UIImageView!
+    
+}
 class UnqContentView: UIViewController {
     
     let appDel = UIApplication.shared.delegate as! AppDelegate
-    
+    var curr = 0
     @IBOutlet weak var contentTable: UITableView!
     @IBOutlet weak var imgTitle: UIImageView!
     override func viewDidLoad() {
@@ -51,11 +55,14 @@ class UnqContentView: UIViewController {
 
 extension UnqContentView : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return appDel.cnt!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "explainCell", for: indexPath )
+        let cell = tableView.dequeueReusableCell(withIdentifier: "explainCell", for: indexPath ) as! UnqCell
+        curr += 1
+        cell.unqCellImg.image = UIImage(named:"\(String(describing: appDel.code!+1))\(String(curr))")
+        
         return cell
     }
     
