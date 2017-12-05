@@ -9,12 +9,35 @@
 import UIKit
 import CoreLocation
 import MapKit
+
+class foodViewCell: UITableViewCell{
+  
+    @IBOutlet weak var foodStoreImg: UIImageView!
+    
+}
+class craftViewCell: UITableViewCell{
+  
+    @IBOutlet weak var craftStoreImg: UIImageView!
+    
+}
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var storeTableView: UITableView!
+    @IBOutlet weak var craftTableView: UITableView!
     var locationManager = CLLocationManager()
     var loadingIndicator: LoadingIndicator!
+    @IBAction func segChange(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0{
+            storeTableView.isHidden = false
+            craftTableView.isHidden = true
+        }else{
+            
+            storeTableView.isHidden = true
+            craftTableView.isHidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingIndicator = LoadingIndicator(usedView: self.view)

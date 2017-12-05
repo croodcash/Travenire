@@ -49,36 +49,16 @@ class UniqueViewController: UIViewController {
         tabelViewFood.isHidden = false
         tableViewCraft.isHidden = true
         
-        let cont = appDelegate.persistentContainer.viewContext
-//        let unique = NSEntityDescription.entity(forEntityName: "Data", in: cont)
-//        let newData = NSManagedObject(entity: unique!, insertInto: cont)
-//        newData.setValue(4, forKey: "code")
-//        newData.setValue("Craft4", forKey: "name")
-//        newData.setValue("craft", forKey: "type")
-//
-//        do {
-//            try cont.save()
-//        } catch  let error as NSError{
-//            print(error)
-//        }
+        data.append(Unique(code: 1, img: "Food1" , type: "food", cnt: 4))
+        data.append(Unique(code: 2, img: "Food2" , type: "food", cnt: 4))
+        data.append(Unique(code: 3, img: "Food3" , type: "food", cnt: 4))
+        data.append(Unique(code: 4, img: "Food4" , type: "food", cnt: 4))
+        data.append(Unique(code: 1, img: "Craft1" , type: "craft", cnt: 3))
+        data.append(Unique(code: 2, img: "Craft2" , type: "craft", cnt: 3))
+        data.append(Unique(code: 3, img: "Craft3" , type: "craft", cnt: 4))
+        data.append(Unique(code: 4, img: "Craft4" , type: "craft", cnt: 4))
         
-        
-        let dataFetch = NSFetchRequest<NSManagedObject>(entityName: "Data")
-        do {
-            let unq: [NSManagedObject] = try cont.fetch(dataFetch)
-            var i = 0
-            for u in unq {
-                i += 1
-                if i == 5 || i == 6 {
-                data.append(Unique(code: u.value(forKey: "code") as! Int, img: u.value(forKey: "name") as! String , type: String(describing: u.value(forKey: "type")!), cnt: 3))
-                }else{
-                    data.append(Unique(code: u.value(forKey: "code") as! Int, img: u.value(forKey: "name") as! String , type: String(describing: u.value(forKey: "type")!), cnt: 4))
-                }
-            }
-        } catch let error as NSError {
-            print(error)
-        }
-        
+
         // Do any additional setup after loading the view.
     }
 }
@@ -94,7 +74,6 @@ extension UniqueViewController: UITableViewDataSource,UITableViewDelegate{
             for d in data{
                 if d.type == "craft"{
                     cnt += 1
-                    print(cnt)
                 }
             }
             return cnt
@@ -102,8 +81,7 @@ extension UniqueViewController: UITableViewDataSource,UITableViewDelegate{
             for d in data{
                 if d.type == "food"{
                     cnt += 1
-                    print(cnt)
-                }
+                 }
             }
             return cnt
         }

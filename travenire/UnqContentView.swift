@@ -22,32 +22,6 @@ class UnqContentView: UIViewController {
         super.viewDidLoad()
         imgTitle.image = UIImage(named: "pic\(String(appDel.code!))")
         
-        
-        let cont = appDel.persistentContainer.viewContext
-        //        let unique = NSEntityDescription.entity(forEntityName: "Data", in: cont)
-        //        let newData = NSManagedObject(entity: unique!, insertInto: cont)
-        //        newData.setValue(4, forKey: "code")
-        //        newData.setValue("Craft4", forKey: "name")
-        //        newData.setValue("craft", forKey: "type")
-        //
-        //        do {
-        //            try cont.save()
-        //        } catch  let error as NSError{
-        //            print(error)
-        //        }
-        
-        
-        let dataFetch = NSFetchRequest<NSManagedObject>(entityName: "Explain")
-        do {
-            let unq: [NSManagedObject] = try cont.fetch(dataFetch)
-            for u in unq {
-                print(u.value(forKey: "code") as! String)
-    
-            }
-        } catch let error as NSError {
-            print(error)
-        }
-        
         // Do any additional setup after loading the view.
     }
     
