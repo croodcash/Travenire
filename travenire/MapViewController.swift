@@ -67,5 +67,17 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-   
+}
+
+extension MapViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = storeTableView.dequeueReusableCell(withIdentifier: "food", for: indexPath) as! foodViewCell
+        return cell
+    }
+    
+    
 }
