@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 class UnqCell: UITableViewCell {
     @IBOutlet weak var unqCellImg: UIImageView!
-    
 }
 class UnqContentView: UIViewController {
     

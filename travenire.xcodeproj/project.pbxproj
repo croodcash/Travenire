@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D0BD6D51FD52A0F0009D013 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0BD6D41FD52A0F0009D013 /* LoadingIndicator.swift */; };
+		9D0BD6D71FD6583C0009D013 /* storeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0BD6D61FD6583C0009D013 /* storeContentView.swift */; };
 		9D35DDEB1FD0046000006352 /* travenire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D35DDE91FD0046000006352 /* travenire.xcdatamodeld */; };
 		9D35DDED1FD3057600006352 /* UnqContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35DDEC1FD3057600006352 /* UnqContentView.swift */; };
 		9D54B63D1FCD0D2300F47122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B63C1FCD0D2300F47122 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		9D0BD6D41FD52A0F0009D013 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		9D0BD6D61FD6583C0009D013 /* storeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeContentView.swift; sourceTree = "<group>"; };
 		9D35DDEA1FD0046000006352 /* travenire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = travenire.xcdatamodel; sourceTree = "<group>"; };
 		9D35DDEC1FD3057600006352 /* UnqContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnqContentView.swift; sourceTree = "<group>"; };
 		9D54B6391FCD0D2300F47122 /* travenire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travenire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				9D775E9D1FCDAC1100B96803 /* MapViewController.swift */,
 				9D0BD6D41FD52A0F0009D013 /* LoadingIndicator.swift */,
 				9D775E9F1FCDAC2B00B96803 /* UniqueViewController.swift */,
+				9D0BD6D61FD6583C0009D013 /* storeContentView.swift */,
 				9D35DDEC1FD3057600006352 /* UnqContentView.swift */,
 				9D35DDE91FD0046000006352 /* travenire.xcdatamodeld */,
 				9D54B6431FCD0D2300F47122 /* Assets.xcassets */,
@@ -194,6 +197,7 @@
 				9D0BD6D51FD52A0F0009D013 /* LoadingIndicator.swift in Sources */,
 				9D54B63D1FCD0D2300F47122 /* AppDelegate.swift in Sources */,
 				9D35DDEB1FD0046000006352 /* travenire.xcdatamodeld in Sources */,
+				9D0BD6D71FD6583C0009D013 /* storeContentView.swift in Sources */,
 				9D775E9E1FCDAC1100B96803 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

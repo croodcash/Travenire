@@ -73,11 +73,17 @@ extension MapViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = storeTableView.dequeueReusableCell(withIdentifier: "food", for: indexPath) as! foodViewCell
+        cell.foodStoreImg.image  = UIImage(named: "11")
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "storeSegue", sender: nil)
+        
+    }
     
 }
