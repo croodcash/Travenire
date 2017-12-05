@@ -194,6 +194,7 @@
                     </view>
                     <connections>
                         <outlet property="productTable" destination="YLX-yA-s6w" id="bYg-Lg-cBx"/>
+                        <outlet property="storeImg" destination="Z3E-ud-tRu" id="3lh-7A-cNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7st-yZ-794" userLabel="First Responder" sceneMemberID="firstResponder"/>

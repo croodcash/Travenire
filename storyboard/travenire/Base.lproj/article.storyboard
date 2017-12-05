@@ -88,19 +88,22 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.79120790155440412" green="0.79120790155440412" blue="0.79120790155440412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbG-iB-HQJ">
-                                <rect key="frame" x="313" y="553" width="46" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="cont"/>
-                                <connections>
-                                    <action selector="contactUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjv-SJ-iId"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ARTICLE" id="YEY-ou-2RL"/>
+                    <navigationItem key="navigationItem" title="ARTICLE" id="YEY-ou-2RL">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="dli-y9-axb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tbG-iB-HQJ">
+                                <rect key="frame" x="295" y="0.0" width="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="cont"/>
+                                <connections>
+                                    <action selector="contactUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjv-SJ-iId"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="articleTableView" destination="3jG-DH-1Oz" id="sib-nc-5y0"/>
                         <outlet property="contUs" destination="JZt-1o-tNu" id="2tA-x9-JhD"/>
@@ -159,7 +162,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cont" width="128" height="128"/>
+        <image name="cont" width="64" height="64"/>
         <image name="home" width="24" height="24"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -20,6 +20,14 @@ class craftViewCell: UITableViewCell{
     @IBOutlet weak var craftStoreImg: UIImageView!
     
 }
+
+struct store {
+    let long: Float64
+    let lat: Float64
+    let img: String
+    let dis: Float64
+    let type: String
+}
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -32,12 +40,11 @@ class MapViewController: UIViewController {
             storeTableView.isHidden = false
             craftTableView.isHidden = true
         }else{
-            
             storeTableView.isHidden = true
             craftTableView.isHidden = false
         }
     }
-    
+    var stores : [store] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingIndicator = LoadingIndicator(usedView: self.view)
@@ -54,6 +61,9 @@ class MapViewController: UIViewController {
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let region = MKCoordinateRegionMake(coordinate, span)
         self.mapView.setRegion(region, animated: true)
+        var dist = sqrt((Float64(coordinate.latitude) - 6.616058)*(Float64(coordinate.latitude) - 6.616058) + (Float64(coordinate.longitude) - 106.814139)*(Float64(coordinate.longitude) - 106.814139))
+        print(dist)
+        stores.append(store(long: -6.616058, lat: 106.814139, img: "11", dis: dist , type: "food"))
         
         let latitude = -6.616058 as CLLocationDegrees
         let longitude = 106.814139 as CLLocationDegrees
@@ -71,7 +81,21 @@ class MapViewController: UIViewController {
 
 extension MapViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        var cnt = 0
+        if tableView == storeTableView{
+            for s in stores{
+                if s.type == "food"{
+                    cnt += 1
+                }
+            }
+        }else{
+            for s in stores{
+                if s.type == "craft"{
+                    cnt += 1
+                }
+            }
+        }
+        return cnt
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

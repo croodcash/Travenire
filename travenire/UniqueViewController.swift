@@ -52,11 +52,9 @@ class UniqueViewController: UIViewController {
         data.append(Unique(code: 1, img: "Food1" , type: "food", cnt: 4))
         data.append(Unique(code: 2, img: "Food2" , type: "food", cnt: 4))
         data.append(Unique(code: 3, img: "Food3" , type: "food", cnt: 4))
-        data.append(Unique(code: 4, img: "Food4" , type: "food", cnt: 4))
         data.append(Unique(code: 1, img: "Craft1" , type: "craft", cnt: 3))
         data.append(Unique(code: 2, img: "Craft2" , type: "craft", cnt: 3))
         data.append(Unique(code: 3, img: "Craft3" , type: "craft", cnt: 4))
-        data.append(Unique(code: 4, img: "Craft4" , type: "craft", cnt: 4))
         
 
         // Do any additional setup after loading the view.
@@ -92,8 +90,8 @@ extension UniqueViewController: UITableViewDataSource,UITableViewDelegate{
         let foodCell = tabelViewFood.dequeueReusableCell(withIdentifier: "foodCell", for : indexPath) as! foodTableViewCell
         let craftCell = tableViewCraft.dequeueReusableCell(withIdentifier: "craftCell", for : indexPath) as! craftTableViewCell
         
-        if data[indexPath.row+4].type == "craft"{
-            craftCell.craftImg.image = UIImage(named: data[indexPath.row+4].img)
+        if data[indexPath.row+3].type == "craft"{
+            craftCell.craftImg.image = UIImage(named: data[indexPath.row+3].img)
         }
         if data[indexPath.row].type == "food"{
             foodCell.foodImg.image = UIImage(named: data[indexPath.row].img)
@@ -111,8 +109,8 @@ extension UniqueViewController: UITableViewDataSource,UITableViewDelegate{
             appDelegate.code = indexPath.row
             appDelegate.cnt = data[indexPath.row].cnt
         }else{
-            appDelegate.code = indexPath.row+4
-            appDelegate.cnt = data[indexPath.row+4].cnt
+            appDelegate.code = indexPath.row+3
+            appDelegate.cnt = data[indexPath.row+3].cnt
         }
     }
 }

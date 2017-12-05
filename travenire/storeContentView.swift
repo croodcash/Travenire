@@ -14,6 +14,7 @@ class productCell: UITableViewCell{
 
 class storeContentView: UIViewController {
 
+    @IBOutlet weak var storeImg: UIImageView!
     @IBOutlet weak var productTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
