@@ -101,9 +101,15 @@ extension MapViewController: UITableViewDataSource, UITableViewDelegate{
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = storeTableView.dequeueReusableCell(withIdentifier: "food", for: indexPath) as! foodViewCell
-        cell.foodStoreImg.image  = UIImage(named: "11")
-        return cell
+        let foodcell = storeTableView.dequeueReusableCell(withIdentifier: "food", for: indexPath) as! foodViewCell
+        foodcell.foodStoreImg.image  = UIImage(named: "11")
+        let craftcell = craftTableView.dequeueReusableCell(withIdentifier: "craft", for: indexPath) as! craftViewCell
+        
+        if tableView == storeTableView{
+            return foodcell
+        }else{
+            return craftcell
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "storeSegue", sender: nil)
