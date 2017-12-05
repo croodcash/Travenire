@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,22 +33,24 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="149" id="4Kj-Wk-d1Y" customClass="articleTableViewCell" customModule="travenire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Kj-Wk-d1Y" id="Gts-iJ-g7j">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Kj-Wk-d1Y" id="Gts-iJ-g7j">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="148.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utP-OQ-h8K">
-                                                    <rect key="frame" x="15" y="2" width="345" height="145"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="utP-OQ-h8K">
+                                                    <rect key="frame" x="15" y="11" width="345" height="127"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="Wfs-7C-lrm"/>
+                                                        <constraint firstAttribute="height" constant="127" id="wIt-zq-1E1"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="top" secondItem="Gts-iJ-g7j" secondAttribute="top" constant="2" id="EjB-pw-Je2"/>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="leading" secondItem="Gts-iJ-g7j" secondAttribute="leading" constant="6" id="QxJ-gf-VFB"/>
-                                                <constraint firstAttribute="trailing" secondItem="utP-OQ-h8K" secondAttribute="trailing" constant="6" id="aGc-r4-f3F"/>
-                                                <constraint firstAttribute="bottom" secondItem="utP-OQ-h8K" secondAttribute="bottom" constant="2" id="d6J-75-5aa"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="trailing" secondItem="Gts-iJ-g7j" secondAttribute="trailingMargin" id="AMh-mq-NXF"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="top" secondItem="Gts-iJ-g7j" secondAttribute="topMargin" constant="3" id="Acg-9Y-WSd"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="top" secondItem="Gts-iJ-g7j" secondAttribute="topMargin" id="FeC-8W-mGJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="utP-OQ-h8K" secondAttribute="bottom" constant="3" id="cfp-2C-2FU"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="bottom" secondItem="Gts-iJ-g7j" secondAttribute="bottomMargin" id="nfe-CW-9Zm"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="leading" secondItem="Gts-iJ-g7j" secondAttribute="leadingMargin" id="u5F-5A-iAd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.066666666666666666" green="0.3411764705882353" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835.5" y="-385.5"/>
+            <point key="canvasLocation" x="834.39999999999998" y="-386.35682158920542"/>
         </scene>
         <!--Article Content View Controler-->
         <scene sceneID="hkl-7i-gAb">
