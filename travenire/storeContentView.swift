@@ -7,15 +7,19 @@
 //
 
 import UIKit
-class productCell: UITableViewCell{
-    
-    @IBOutlet weak var foodImg: UIImageView!
-}
 
 class storeContentView: UIViewController {
 
     @IBOutlet weak var storeImg: UIImageView!
-    @IBOutlet weak var productTable: UITableView!
+    @IBOutlet weak var product: UIImageView!
+    @IBOutlet weak var address: UILabel!
+    @IBAction func call(_ sender: UIButton) {
+        
+    }
+    @IBAction func direction(_ sender: UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,17 +28,5 @@ class storeContentView: UIViewController {
 
 }
 
-extension storeContentView: UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "product", for: indexPath) as! productCell
-        cell.foodImg.image = UIImage(named: "11")
-        return cell
-    }
-}
+
 

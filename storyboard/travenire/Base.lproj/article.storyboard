@@ -6,11 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ARTICLE-->
+        <!--Bogor's Feed-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ArticleViewControler" customModule="travenire" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,25 +28,22 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="149" id="4Kj-Wk-d1Y" customClass="articleTableViewCell" customModule="travenire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Kj-Wk-d1Y" id="Gts-iJ-g7j">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Kj-Wk-d1Y" id="Gts-iJ-g7j">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="148.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utP-OQ-h8K">
-                                                    <rect key="frame" x="15" y="2" width="345" height="145"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="Wfs-7C-lrm"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="utP-OQ-h8K">
+                                                    <rect key="frame" x="18" y="13" width="345" height="127"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="top" secondItem="Gts-iJ-g7j" secondAttribute="top" constant="2" id="EjB-pw-Je2"/>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="leading" secondItem="Gts-iJ-g7j" secondAttribute="leading" constant="6" id="QxJ-gf-VFB"/>
-                                                <constraint firstAttribute="trailing" secondItem="utP-OQ-h8K" secondAttribute="trailing" constant="6" id="aGc-r4-f3F"/>
-                                                <constraint firstAttribute="bottom" secondItem="utP-OQ-h8K" secondAttribute="bottom" constant="2" id="d6J-75-5aa"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="trailing" secondItem="Gts-iJ-g7j" secondAttribute="trailingMargin" constant="3" id="OXN-Dz-uCA"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="leading" secondItem="Gts-iJ-g7j" secondAttribute="leadingMargin" constant="3" id="o8z-mr-Y4E"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="top" secondItem="Gts-iJ-g7j" secondAttribute="topMargin" constant="2" id="uHh-8z-T4i"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="bottom" secondItem="Gts-iJ-g7j" secondAttribute="bottomMargin" constant="2" id="wQv-fr-epj"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.066666666666666666" green="0.3411764705882353" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="img" destination="utP-OQ-h8K" id="IoL-8F-ZXs"/>
                                         </connections>
@@ -60,7 +58,7 @@
                         <color key="backgroundColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ARTICLE" id="YEY-ou-2RL"/>
+                    <navigationItem key="navigationItem" title="Bogor's Feed" id="YEY-ou-2RL"/>
                     <connections>
                         <outlet property="articleTableView" destination="3jG-DH-1Oz" id="sib-nc-5y0"/>
                         <segue destination="bRc-ht-WtH" kind="show" identifier="segue1" id="6DE-ui-Hpx"/>
@@ -68,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835.5" y="-385.5"/>
+            <point key="canvasLocation" x="834.39999999999998" y="-386.35682158920542"/>
         </scene>
         <!--Article Content View Controler-->
         <scene sceneID="hkl-7i-gAb">
@@ -104,7 +102,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tLE-DZ-Qku">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.18823529411764706" green="0.41176470588235292" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.43137254899999999" green="0.81960784310000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

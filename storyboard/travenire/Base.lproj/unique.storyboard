@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="4Lr-2p-I6s"/>
                     </view>
                     <connections>
@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="1149.5999999999999" y="850.52473763118451"/>
         </scene>
-        <!--UNIQUE-->
+        <!--Uniqueness-->
         <scene sceneID="IeK-QE-QKe">
             <objects>
                 <viewController id="oCC-eM-Wdv" customClass="UniqueViewController" customModule="travenire" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,6 +86,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AtJ-qo-7I4">
+                                <rect key="frame" x="-8" y="309" width="394" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <segments>
+                                    <segment title="Food"/>
+                                    <segment title="Craft"/>
+                                </segments>
+                                <color key="tintColor" red="0.43137254899999999" green="0.81960784310000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segChange:" destination="oCC-eM-Wdv" eventType="valueChanged" id="bRa-je-ch5"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f6n-eQ-SuL">
                                 <rect key="frame" x="0.0" y="335" width="375" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -158,28 +171,15 @@
                                     <outlet property="delegate" destination="oCC-eM-Wdv" id="gjb-7A-9d4"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AtJ-qo-7I4">
-                                <rect key="frame" x="0.0" y="309" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <segments>
-                                    <segment title="Food"/>
-                                    <segment title="Craft"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="segChange:" destination="oCC-eM-Wdv" eventType="valueChanged" id="bRa-je-ch5"/>
-                                </connections>
-                            </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pY-sp-KvJ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Syf-rh-7Fb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="UNIQUE" id="e8q-L2-2bg"/>
+                    <navigationItem key="navigationItem" title="Uniqueness" id="e8q-L2-2bg"/>
                     <connections>
                         <outlet property="slider" destination="9pY-sp-KvJ" id="vLR-OR-fhr"/>
                         <outlet property="tabelViewFood" destination="H0d-yS-IH4" id="N9g-BW-Am2"/>
@@ -202,7 +202,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.74117647060000003" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.43137254901960786" green="0.81960784313725488" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
