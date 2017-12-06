@@ -52,9 +52,9 @@
                         <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xgk-GQ-WMK" kind="relationship" relationship="viewControllers" id="ibn-od-Sgp"/>
-                        <segue destination="Dnd-qm-wzg" kind="relationship" relationship="viewControllers" id="ZPT-Hu-Dfb"/>
                         <segue destination="QjM-2i-V9t" kind="relationship" relationship="viewControllers" id="mrF-1D-lIi"/>
+                        <segue destination="Dnd-qm-wzg" kind="relationship" relationship="viewControllers" id="ZPT-Hu-Dfb"/>
+                        <segue destination="xgk-GQ-WMK" kind="relationship" relationship="viewControllers" id="ibn-od-Sgp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPf-Fp-T9f" userLabel="First Responder" sceneMemberID="firstResponder"/>

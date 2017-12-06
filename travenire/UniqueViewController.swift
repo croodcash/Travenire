@@ -17,14 +17,14 @@ struct Unique {
 
 class foodTableViewCell: UITableViewCell{
     @IBOutlet weak var foodImg: UIImageView!
-    
 }
 class craftTableViewCell: UITableViewCell{
     @IBOutlet weak var craftImg: UIImageView!
-    
 }
 
 class UniqueViewController: UIViewController {
+    
+    @IBOutlet weak var slider: UIImageView!
     @IBOutlet weak var tabelViewFood: UITableView!
     
     @IBOutlet weak var tableViewCraft: UITableView!
@@ -42,7 +42,31 @@ class UniqueViewController: UIViewController {
     }
    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    
+    func slide()  {
+        DispatchQueue.global().async {
+            var i = 1
+            while(true){
+                if i>4{
+                    i = 1
+                }
+                DispatchQueue.main.async {
+                    UIView.commitAnimations()
+                    UIView.beginAnimations(nil, context: nil)
+                    UIView.setAnimationDelegate(self)
+                    UIView.setAnimationDelay(2.5)
+                    UIView.setAnimationCurve(UIViewAnimationCurve.easeIn)
+                    self.slider.alpha = CGFloat(1)
+                    i += 1
+                    self.slider.image = UIImage(named: "pic\(i)")
+                    self.slider.alpha = CGFloat(0)
+                    
+                    UIView.commitAnimations()
+                }
+                sleep(3)
+            }
+        }
+       
+    }
     var data: [Unique] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +80,7 @@ class UniqueViewController: UIViewController {
         data.append(Unique(code: 2, img: "Craft2" , type: "craft", cnt: 3))
         data.append(Unique(code: 3, img: "Craft3" , type: "craft", cnt: 4))
         
+        slide()
 
         // Do any additional setup after loading the view.
     }

@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Futura.ttc">
-            <string>Futura-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--ARTICLE-->
         <scene sceneID="tne-QT-ifu">
@@ -61,53 +56,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="BP8-mr-tHc"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8V-ra-e0c" customClass="ContactUs" customModule="travenire" customModuleProvider="target">
-                                <rect key="frame" x="28" y="219" width="314" height="238"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr3-hy-FD5">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.066666666666666666" green="0.3411764705882353" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9w6-fJ-OUX">
-                                        <rect key="frame" x="279" y="0.0" width="35" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="X"/>
-                                        <connections>
-                                            <action selector="close:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2EZ-Pp-bfD"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZt-1o-tNu">
-                                        <rect key="frame" x="0.0" y="34" width="314" height="204"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.79120790155440412" green="0.79120790155440412" blue="0.79120790155440412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ARTICLE" id="YEY-ou-2RL">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="dli-y9-axb">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tbG-iB-HQJ">
-                                <rect key="frame" x="295" y="0.0" width="64" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <state key="normal" image="cont"/>
-                                <connections>
-                                    <action selector="contactUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjv-SJ-iId"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="ARTICLE" id="YEY-ou-2RL"/>
                     <connections>
                         <outlet property="articleTableView" destination="3jG-DH-1Oz" id="sib-nc-5y0"/>
-                        <outlet property="contUs" destination="JZt-1o-tNu" id="2tA-x9-JhD"/>
-                        <outlet property="contactUsView" destination="L8V-ra-e0c" id="qjn-Bl-RlV"/>
                         <segue destination="bRc-ht-WtH" kind="show" identifier="segue1" id="6DE-ui-Hpx"/>
                     </connections>
                 </viewController>
@@ -162,7 +117,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cont" width="64" height="64"/>
         <image name="home" width="24" height="24"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

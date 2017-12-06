@@ -27,25 +27,11 @@ class articleTableViewCell: UITableViewCell {
 
 class ArticleViewControler: UIViewController{
     @IBOutlet weak var articleTableView: UITableView!
-    @IBOutlet weak var contactUsView: UIView!
-    @IBAction func contactUs(_ sender: UIButton) {
-        contactUsView.isHidden = false
-        self.articleTableView.isUserInteractionEnabled = false
-    }
-    
-    @IBAction func close(_ sender: UIButton) {
-        self.articleTableView.isUserInteractionEnabled = true
-        contactUsView.isHidden = true
-    }
     
     var data: [Article] = Article.fetchData()
     
-    @IBOutlet weak var contUs: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactUsView.isHidden = true
-        contUs.image = UIImage(named: "ContactUs")
         // Do any additional setup after loading the view.
     }
 }
