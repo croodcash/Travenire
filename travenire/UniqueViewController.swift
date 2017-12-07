@@ -57,7 +57,7 @@ class UniqueViewController: UIViewController {
                     UIView.setAnimationCurve(UIViewAnimationCurve.easeIn)
                     self.slider.alpha = CGFloat(1)
                     i += 1
-                    self.slider.image = UIImage(named: "pic\(i)")
+                    self.slider.image = UIImage(named: "promo\(i)")
                     self.slider.alpha = CGFloat(0)
                     
                     UIView.commitAnimations()

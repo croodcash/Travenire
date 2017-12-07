@@ -21,13 +21,6 @@ class craftViewCell: UITableViewCell{
     
 }
 
-struct store {
-    let long: Float64
-    let lat: Float64
-    let img: String
-    let dis: Float64
-    let name: String
-}
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -47,8 +40,10 @@ class MapViewController: UIViewController {
             craftAnotations()
         }
     }
-    var foodStores : [store] = []
-    var craftStores : [store] = []
+    
+    var index:Int?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingIndicator = LoadingIndicator(usedView: self.view)
@@ -73,20 +68,21 @@ class MapViewController: UIViewController {
     func foodAnotations() {
         let anotations = self.mapView.annotations
         self.mapView.removeAnnotations(anotations)
+        appDelegate.foodStores.removeAll()
         var dist = sqrt((Float64(coordinate.latitude) - (-6.616058))*(Float64(coordinate.latitude) - (-6.616058)) + (Float64(coordinate.longitude) - 106.814139)*(Float64(coordinate.longitude) - 106.814139))
         print(dist)
-        foodStores.append(store(long: 106.814139, lat: -6.616058, img: "store1", dis: dist, name:"Lapis Bogor Sangkuriang" ))
+        appDelegate.foodStores.append(AppDelegate.store(long: 106.814139, lat: -6.616058, img: "store1", dis: dist, name:"Lapis Bogor Sangkuriang", code: 1))
         dist = sqrt((Float64(coordinate.latitude) - (-6.611012))*(Float64(coordinate.latitude) - (-6.611012)) + (Float64(coordinate.longitude) - 106.805917)*(Float64(coordinate.longitude) - 106.805917))
-        foodStores.append(store(long: 106.805917, lat: -6.611012, img: "store2", dis: dist, name: "Roti Unyil Venus" ))
+        appDelegate.foodStores.append(AppDelegate.store(long: 106.805917, lat: -6.611012, img: "store2", dis: dist, name: "Roti Unyil Venus", code: 2 ))
         dist = sqrt((Float64(coordinate.latitude) - (-6.617491))*(Float64(coordinate.latitude) - (-6.617491)) + (Float64(coordinate.longitude) - 106.811896)*(Float64(coordinate.longitude) - 106.811896))
-        foodStores.append(store(long: 106.811896, lat: -6.617491, img: "store3", dis: dist, name: "Asinan gedung dalem"))
-        foodStores.sort { (store1, store2) -> Bool in
+        appDelegate.foodStores.append(AppDelegate.store(long: 106.811896, lat: -6.617491, img: "store3", dis: dist, name: "Asinan gedung dalem", code: 3))
+        appDelegate.foodStores.sort { (store1, store2) -> Bool in
             return store1.dis < store2.dis
         }
         var Anotations : [MKPointAnnotation] = []
         //create new annotation
         var i = 0
-        for x in foodStores{
+        for x in appDelegate.foodStores{
             Anotations.append(MKPointAnnotation())
             Anotations[i].title = x.name
             Anotations[i].coordinate = CLLocationCoordinate2DMake(x.lat as CLLocationDegrees, x.long as CLLocationDegrees)
@@ -97,20 +93,22 @@ class MapViewController: UIViewController {
     func craftAnotations() {
         let anotations = self.mapView.annotations
         self.mapView.removeAnnotations(anotations)
+        appDelegate.craftStores.removeAll()
         var dist = sqrt((Float64(coordinate.latitude) - (-6.573157))*(Float64(coordinate.latitude) - (-6.573157)) + (Float64(coordinate.longitude) - 106.799530)*(Float64(coordinate.longitude) - 106.799530))
         print(dist)
-        craftStores.append(store(long: 106.799530, lat: -6.573157, img: "store4", dis: dist, name:"Batik Tulis Tradisiku" ))
-        dist = sqrt((Float64(coordinate.latitude) - (-6.586650))*(Float64(coordinate.latitude) - (-6.586650)) + (Float64(coordinate.longitude) - 106.795172)*(Float64(coordinate.longitude) - 106.795172))
-        craftStores.append(store(long: 106.795172, lat: -6.586650, img: "store5", dis: dist, name: "Sanggar Tumaritis" ))
+        appDelegate.craftStores.append(AppDelegate.store(long: 106.799530, lat: -6.573157, img: "store4", dis: dist, name:"Batik Tulis Tradisiku", code: 4))
+        dist = sqrt((Float64(coordinate.latitude) - (-6.548280))*(Float64(coordinate.latitude) - (-6.548280)) + (Float64(coordinate.longitude) - 106.775469)*(Float64(coordinate.longitude) - 106.775469))
+        appDelegate.craftStores.append(AppDelegate.store(long: 106.775469, lat: -6.548280, img: "store5", dis: dist, name: "Gift Shop Wayang Bambu", code: 5))
         dist = sqrt((Float64(coordinate.latitude) - (-6.624568))*(Float64(coordinate.latitude) - (-6.624568)) + (Float64(coordinate.longitude) - 106.827945)*(Float64(coordinate.longitude) - 106.827945))
-        craftStores.append(store(long: 106.827945, lat: -6.624568, img: "store6", dis: dist, name: "Kujang Padjajaran"))
-        craftStores.sort { (store1, store2) -> Bool in
+        appDelegate.craftStores.append(AppDelegate.store(long: 106.827945, lat: -6.624568, img: "store6", dis: dist, name: "Kujang Padjajaran", code: 6))
+        appDelegate.craftStores.sort { (store1, store2) -> Bool in
             return store1.dis < store2.dis
         }
+        
         var Anotations : [MKPointAnnotation] = []
         //create new annotation
         var i = 0
-        for x in craftStores{
+        for x in appDelegate.craftStores{
             Anotations.append(MKPointAnnotation())
             Anotations[i].title = x.name
             Anotations[i].coordinate = CLLocationCoordinate2DMake(x.lat as CLLocationDegrees, x.long as CLLocationDegrees)
@@ -123,9 +121,9 @@ class MapViewController: UIViewController {
 extension MapViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == storeTableView{
-            return foodStores.count
+            return appDelegate.foodStores.count
         }else{
-            return craftStores.count
+            return appDelegate.craftStores.count
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -136,15 +134,28 @@ extension MapViewController: UITableViewDataSource, UITableViewDelegate{
         let craftcell = craftTableView.dequeueReusableCell(withIdentifier: "craft", for: indexPath) as! craftViewCell
         
         if tableView == storeTableView{
-            foodcell.foodStoreImg.image = UIImage(named: foodStores[indexPath.row].img)
+            foodcell.foodStoreImg.image = UIImage(named: appDelegate.foodStores[indexPath.row].img)
             return foodcell
         }else{
-            craftcell.craftStoreImg.image = UIImage(named: craftStores[indexPath.row].img)
+            craftcell.craftStoreImg.image = UIImage(named: appDelegate.craftStores[indexPath.row].img)
             return craftcell
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let des = segue.destination as! storeContentView
+        des.index = index!
+        if storeTableView.isHidden == false{
+            des.code = appDelegate.foodStores[index!].code
+            
+        }else{
+            des.code = appDelegate.craftStores[index!].code
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        index = indexPath.row
         performSegue(withIdentifier: "storeSegue", sender: nil)
+        
     }
     
 }

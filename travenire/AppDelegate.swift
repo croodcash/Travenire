@@ -9,11 +9,21 @@
 import UIKit
 import CoreData
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var code:Int?
     var cnt: Int?
     var window: UIWindow?
-
+    struct store {
+        let long: Float64
+        let lat: Float64
+        let img: String
+        let dis: Float64
+        let name: String
+        let code: Int
+    }
+    var foodStores : [store] = []
+    var craftStores : [store] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

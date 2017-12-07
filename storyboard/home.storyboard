@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Maps-->
         <scene sceneID="nF0-1i-RmH">
@@ -45,6 +50,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="xbR-sV-vFm" secondAttribute="trailing" id="ItI-A9-in5"/>
                                                 <constraint firstItem="xbR-sV-vFm" firstAttribute="leading" secondItem="Evg-LR-CPv" secondAttribute="leading" id="MRm-ll-NQ1"/>
@@ -79,6 +85,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="tR3-c4-8Vb" secondAttribute="bottom" id="28t-H1-Pll"/>
                                                 <constraint firstItem="tR3-c4-8Vb" firstAttribute="leading" secondItem="n9j-m9-5jr" secondAttribute="leading" id="IyK-WI-zrY"/>
@@ -144,10 +151,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-gz-yqJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-gz-yqJ">
                                 <rect key="frame" x="9" y="239" width="350" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -179,11 +186,39 @@
                         <outlet property="address" destination="nXQ-gz-yqJ" id="ATT-kM-ITB"/>
                         <outlet property="product" destination="vYf-7f-Tcz" id="u1i-ZT-d0n"/>
                         <outlet property="storeImg" destination="Z3E-ud-tRu" id="3lh-7A-cNq"/>
+                        <segue destination="FDe-jn-Klu" kind="show" identifier="direct" id="Mfx-yL-R7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7st-yZ-794" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1918" y="296"/>
+        </scene>
+        <!--Direction View Controller-->
+        <scene sceneID="JKr-YC-BoP">
+            <objects>
+                <viewController id="FDe-jn-Klu" customClass="directionViewController" customModule="travenire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ovo-mY-vnx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pKi-bc-yW3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FDe-jn-Klu" id="hGv-UU-pew"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="D8S-4R-ue9"/>
+                    </view>
+                    <connections>
+                        <outlet property="direct" destination="pKi-bc-yW3" id="Ypj-Nd-kdy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOh-dL-akx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2685.5999999999999" y="295.50224887556226"/>
         </scene>
         <!--Map-->
         <scene sceneID="FoD-g6-l8O">
