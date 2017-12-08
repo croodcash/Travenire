@@ -18,16 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LAUNCH_SCREEN" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-KX-Gjs">
-                                <rect key="frame" x="-11" y="-16" width="393" height="698"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-KX-Gjs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kCF-JH-bCN">
                                 <rect key="frame" x="167" y="542" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.58496952056884766" green="0.5829126238822937" blue="0.66984719038009644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="bottom" secondItem="Rz2-Va-hhp" secondAttribute="bottom" id="GKL-He-Jq5"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="leading" secondItem="ro9-zZ-JbJ" secondAttribute="leading" id="NhM-7t-q6c"/>
+                            <constraint firstAttribute="trailing" secondItem="Rba-KX-Gjs" secondAttribute="trailing" id="YJ1-l3-wKK"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="top" secondItem="ro9-zZ-JbJ" secondAttribute="top" id="jKF-9U-uwm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rz2-Va-hhp"/>
                     </view>
                     <connections>
@@ -93,7 +99,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LAUNCH_SCREEN" width="760" height="1358"/>
+        <image name="launch" width="752" height="1329"/>
         <image name="tabBarItem:ujK-NH-42i:image" width="64" height="64">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU

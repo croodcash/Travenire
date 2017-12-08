@@ -35,7 +35,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f6n-eQ-SuL">
-                                <rect key="frame" x="0.0" y="344" width="375" height="280"/>
+                                <rect key="frame" x="0.0" y="344" width="375" height="323"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="craftCell" rowHeight="90" id="RG9-RR-Wgc" customClass="craftTableViewCell" customModule="travenire" customModuleProvider="target">
@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="250"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0d-yS-IH4">
-                                <rect key="frame" x="0.0" y="344" width="375" height="280"/>
+                                <rect key="frame" x="0.0" y="344" width="375" height="323"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="89" id="BCG-Gg-CRC" customClass="foodTableViewCell" customModule="travenire" customModuleProvider="target">
@@ -109,20 +109,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="AtJ-qo-7I4" firstAttribute="top" secondItem="9pY-sp-KvJ" secondAttribute="bottom" constant="-3" id="2pt-Fb-ft8"/>
-                            <constraint firstItem="H0d-yS-IH4" firstAttribute="top" secondItem="AtJ-qo-7I4" secondAttribute="bottom" constant="-2" id="3cn-0T-dB9"/>
-                            <constraint firstItem="f6n-eQ-SuL" firstAttribute="trailing" secondItem="Syf-rh-7Fb" secondAttribute="trailing" id="3iC-K8-yU2"/>
-                            <constraint firstItem="H0d-yS-IH4" firstAttribute="leading" secondItem="Syf-rh-7Fb" secondAttribute="leading" id="4SB-em-oEd"/>
                             <constraint firstItem="9pY-sp-KvJ" firstAttribute="leading" secondItem="Syf-rh-7Fb" secondAttribute="leading" id="5qX-hK-bEL"/>
-                            <constraint firstItem="Syf-rh-7Fb" firstAttribute="bottom" secondItem="H0d-yS-IH4" secondAttribute="bottom" constant="43" id="AXo-a9-34Q"/>
+                            <constraint firstItem="H0d-yS-IH4" firstAttribute="top" secondItem="9pY-sp-KvJ" secondAttribute="bottom" constant="30" id="8LN-Ub-XJ2"/>
+                            <constraint firstItem="H0d-yS-IH4" firstAttribute="trailing" secondItem="Syf-rh-7Fb" secondAttribute="trailing" id="91x-fs-zt2"/>
                             <constraint firstItem="9pY-sp-KvJ" firstAttribute="height" secondItem="Vqp-0A-e6I" secondAttribute="height" multiplier="0.375" id="BDd-Bw-V5o"/>
                             <constraint firstItem="AtJ-qo-7I4" firstAttribute="leading" secondItem="Vqp-0A-e6I" secondAttribute="leading" constant="-10" id="BSm-87-Okd"/>
                             <constraint firstAttribute="trailing" secondItem="AtJ-qo-7I4" secondAttribute="trailing" constant="-10" id="Dnn-XN-ibD"/>
-                            <constraint firstItem="H0d-yS-IH4" firstAttribute="trailing" secondItem="Syf-rh-7Fb" secondAttribute="trailing" id="Kuy-L7-o2X"/>
-                            <constraint firstItem="f6n-eQ-SuL" firstAttribute="top" secondItem="AtJ-qo-7I4" secondAttribute="bottom" constant="-2" id="O3S-gD-kNb"/>
-                            <constraint firstItem="Syf-rh-7Fb" firstAttribute="bottom" secondItem="f6n-eQ-SuL" secondAttribute="bottom" constant="43" id="VD9-3O-hsk"/>
+                            <constraint firstItem="f6n-eQ-SuL" firstAttribute="trailing" secondItem="Syf-rh-7Fb" secondAttribute="trailing" id="Fsy-8Y-TLg"/>
+                            <constraint firstItem="Syf-rh-7Fb" firstAttribute="bottom" secondItem="f6n-eQ-SuL" secondAttribute="bottom" id="GKL-9r-0id"/>
                             <constraint firstItem="9pY-sp-KvJ" firstAttribute="top" secondItem="Syf-rh-7Fb" secondAttribute="top" id="VUm-nA-Ybl"/>
+                            <constraint firstItem="H0d-yS-IH4" firstAttribute="leading" secondItem="Syf-rh-7Fb" secondAttribute="leading" id="bnC-Fm-Ybo"/>
                             <constraint firstItem="9pY-sp-KvJ" firstAttribute="trailing" secondItem="Syf-rh-7Fb" secondAttribute="trailing" id="g54-oM-6Ny"/>
-                            <constraint firstItem="f6n-eQ-SuL" firstAttribute="leading" secondItem="Syf-rh-7Fb" secondAttribute="leading" id="kWP-qr-T53"/>
+                            <constraint firstItem="f6n-eQ-SuL" firstAttribute="top" secondItem="9pY-sp-KvJ" secondAttribute="bottom" constant="30" id="nTw-sY-MDp"/>
+                            <constraint firstItem="Syf-rh-7Fb" firstAttribute="bottom" secondItem="H0d-yS-IH4" secondAttribute="bottom" id="tIl-P2-0B1"/>
+                            <constraint firstItem="f6n-eQ-SuL" firstAttribute="leading" secondItem="Syf-rh-7Fb" secondAttribute="leading" id="u6d-oE-hyn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Syf-rh-7Fb"/>
                     </view>
