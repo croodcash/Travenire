@@ -21,8 +21,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3jG-DH-1Oz">
                                 <rect key="frame" x="0.0" y="15" width="375" height="652"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.066666666666666666" green="0.3411764705882353" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="149" id="4Kj-Wk-d1Y" customClass="articleTableViewCell" customModule="travenire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="149"/>
@@ -32,14 +32,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="utP-OQ-h8K">
-                                                    <rect key="frame" x="18" y="13" width="345" height="127"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="127"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="trailing" secondItem="Gts-iJ-g7j" secondAttribute="trailingMargin" constant="3" id="OXN-Dz-uCA"/>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="leading" secondItem="Gts-iJ-g7j" secondAttribute="leadingMargin" constant="3" id="o8z-mr-Y4E"/>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="top" secondItem="Gts-iJ-g7j" secondAttribute="topMargin" constant="2" id="uHh-8z-T4i"/>
-                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="bottom" secondItem="Gts-iJ-g7j" secondAttribute="bottomMargin" constant="2" id="wQv-fr-epj"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="bottom" secondItem="Gts-iJ-g7j" secondAttribute="bottomMargin" id="19k-z8-rZI"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="trailing" secondItem="Gts-iJ-g7j" secondAttribute="trailingMargin" id="CXE-fa-GME"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="centerX" secondItem="Gts-iJ-g7j" secondAttribute="centerX" id="R3o-OB-ql7"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="top" secondItem="Gts-iJ-g7j" secondAttribute="topMargin" id="Tkh-Rz-ZGw"/>
+                                                <constraint firstItem="utP-OQ-h8K" firstAttribute="leading" secondItem="Gts-iJ-g7j" secondAttribute="leadingMargin" id="eBf-2v-yqi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -54,7 +55,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.18823529410000001" green="0.41176470590000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="3jG-DH-1Oz" secondAttribute="trailing" id="Mtd-uw-Dmc"/>
                             <constraint firstItem="3jG-DH-1Oz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-49" id="RxD-Lt-snU"/>
@@ -86,7 +87,7 @@
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="SQs-ic-iZw" firstAttribute="top" secondItem="cKQ-ki-tJ1" secondAttribute="top" id="4b4-y4-RQ7"/>
                             <constraint firstItem="SQs-ic-iZw" firstAttribute="bottom" secondItem="cKQ-ki-tJ1" secondAttribute="bottom" id="K9f-MN-gwi"/>

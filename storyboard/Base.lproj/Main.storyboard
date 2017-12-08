@@ -21,18 +21,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-KX-Gjs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kCF-JH-bCN">
-                                <rect key="frame" x="167" y="542" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kCF-JH-bCN">
+                                <rect key="frame" x="169" y="542" width="37" height="37"/>
                                 <color key="color" red="0.58496952056884766" green="0.5829126238822937" blue="0.66984719038009644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="bottom" secondItem="Rz2-Va-hhp" secondAttribute="bottom" id="6fm-Wj-iWP"/>
+                            <constraint firstItem="Rz2-Va-hhp" firstAttribute="bottom" secondItem="kCF-JH-bCN" secondAttribute="bottom" constant="88" id="7iS-dT-49e"/>
+                            <constraint firstItem="Rz2-Va-hhp" firstAttribute="trailing" secondItem="Rba-KX-Gjs" secondAttribute="trailing" id="BGW-hg-kEh"/>
                             <constraint firstItem="Rba-KX-Gjs" firstAttribute="bottom" secondItem="Rz2-Va-hhp" secondAttribute="bottom" id="GKL-He-Jq5"/>
                             <constraint firstItem="Rba-KX-Gjs" firstAttribute="leading" secondItem="ro9-zZ-JbJ" secondAttribute="leading" id="NhM-7t-q6c"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="leading" secondItem="ro9-zZ-JbJ" secondAttribute="leading" id="OJS-0q-OLL"/>
                             <constraint firstAttribute="trailing" secondItem="Rba-KX-Gjs" secondAttribute="trailing" id="YJ1-l3-wKK"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="bottom" secondItem="Rz2-Va-hhp" secondAttribute="bottom" id="cw3-HP-UqR"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="top" secondItem="ro9-zZ-JbJ" secondAttribute="top" id="e7x-gC-5Az"/>
                             <constraint firstItem="Rba-KX-Gjs" firstAttribute="top" secondItem="ro9-zZ-JbJ" secondAttribute="top" id="jKF-9U-uwm"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="trailing" secondItem="Rz2-Va-hhp" secondAttribute="trailing" id="lxq-pN-i95"/>
+                            <constraint firstItem="kCF-JH-bCN" firstAttribute="centerX" secondItem="Rba-KX-Gjs" secondAttribute="centerX" id="uTr-4g-qng"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="top" secondItem="ro9-zZ-JbJ" secondAttribute="top" id="wuN-6s-Gyr"/>
+                            <constraint firstItem="Rba-KX-Gjs" firstAttribute="leading" secondItem="Rz2-Va-hhp" secondAttribute="leading" id="ye8-hq-Fjc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rz2-Va-hhp"/>
                     </view>
