@@ -46,17 +46,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadingIndicator = LoadingIndicator(usedView: self.view)
-        locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            //find location
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startMonitoringSignificantLocationChanges()
-        }
+        location()
         self.mapView.showsUserLocation = true
-        coordinate = CLLocationCoordinate2D()
-        coordinate.latitude = (locationManager.location?.coordinate.latitude)!
-        coordinate.longitude = (locationManager.location?.coordinate.longitude)!
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegionMake(coordinate, span)
         self.mapView.setRegion(region, animated: true)
@@ -64,6 +55,18 @@ class MapViewController: UIViewController {
         foodAnotations()
         
         // Do any additional setup after loading the view.
+    }
+    func location() {
+        loadingIndicator = LoadingIndicator(usedView: self.view)
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            //find location
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startMonitoringSignificantLocationChanges()
+        }
+        coordinate = CLLocationCoordinate2D()
+        coordinate.latitude = (locationManager.location?.coordinate.latitude)!
+        coordinate.longitude = (locationManager.location?.coordinate.longitude)!
     }
     func foodAnotations() {
         let anotations = self.mapView.annotations

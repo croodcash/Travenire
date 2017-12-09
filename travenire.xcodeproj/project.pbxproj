@@ -10,7 +10,6 @@
 		9D0BD6D51FD52A0F0009D013 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0BD6D41FD52A0F0009D013 /* LoadingIndicator.swift */; };
 		9D0BD6D71FD6583C0009D013 /* storeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0BD6D61FD6583C0009D013 /* storeContentView.swift */; };
 		9D0BD6D91FD930A20009D013 /* directionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0BD6D81FD930A20009D013 /* directionViewController.swift */; };
-		9D0BD6DC1FD990F80009D013 /* uniqueDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0BD6DA1FD990F80009D013 /* uniqueDetail.storyboard */; };
 		9D35DDED1FD3057600006352 /* UnqContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35DDEC1FD3057600006352 /* UnqContentView.swift */; };
 		9D54B63D1FCD0D2300F47122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B63C1FCD0D2300F47122 /* AppDelegate.swift */; };
 		9D54B63F1FCD0D2300F47122 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B63E1FCD0D2300F47122 /* mainViewController.swift */; };
@@ -19,8 +18,6 @@
 		9D54B6501FCD152A00F47122 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D54B64F1FCD152A00F47122 /* MapKit.framework */; };
 		9D775E901FCD6A3000B96803 /* ArticleViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D775E8F1FCD6A3000B96803 /* ArticleViewControler.swift */; };
 		9D775E961FCD6BF400B96803 /* article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D775E941FCD6BF400B96803 /* article.storyboard */; };
-		9D775E981FCD6C0300B96803 /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D775E971FCD6C0300B96803 /* home.storyboard */; };
-		9D775E9B1FCD6C1400B96803 /* unique.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D775E991FCD6C1400B96803 /* unique.storyboard */; };
 		9D775E9E1FCDAC1100B96803 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D775E9D1FCDAC1100B96803 /* MapViewController.swift */; };
 		9D775EA01FCDAC2B00B96803 /* UniqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D775E9F1FCDAC2B00B96803 /* UniqueViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +26,6 @@
 		9D0BD6D41FD52A0F0009D013 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		9D0BD6D61FD6583C0009D013 /* storeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeContentView.swift; sourceTree = "<group>"; };
 		9D0BD6D81FD930A20009D013 /* directionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = directionViewController.swift; sourceTree = "<group>"; };
-		9D0BD6DB1FD990F80009D013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = storyboard/travenire/Base.lproj/uniqueDetail.storyboard; sourceTree = "<group>"; };
 		9D35DDEC1FD3057600006352 /* UnqContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnqContentView.swift; sourceTree = "<group>"; };
 		9D54B6391FCD0D2300F47122 /* travenire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travenire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D54B63C1FCD0D2300F47122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +36,6 @@
 		9D54B64F1FCD152A00F47122 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9D775E8F1FCD6A3000B96803 /* ArticleViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewControler.swift; sourceTree = "<group>"; };
 		9D775E951FCD6BF400B96803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = travenire/Base.lproj/article.storyboard; sourceTree = "<group>"; };
-		9D775E971FCD6C0300B96803 /* home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
-		9D775E9A1FCD6C1400B96803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = travenire/Base.lproj/unique.storyboard; sourceTree = "<group>"; };
 		9D775E9D1FCDAC1100B96803 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9D775E9F1FCDAC2B00B96803 /* UniqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,9 +99,6 @@
 		9D775E9C1FCDAB8B00B96803 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				9D0BD6DA1FD990F80009D013 /* uniqueDetail.storyboard */,
-				9D775E991FCD6C1400B96803 /* unique.storyboard */,
-				9D775E971FCD6C0300B96803 /* home.storyboard */,
 				9D775E941FCD6BF400B96803 /* article.storyboard */,
 				9D54B6401FCD0D2300F47122 /* Main.storyboard */,
 			);
@@ -178,10 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D0BD6DC1FD990F80009D013 /* uniqueDetail.storyboard in Resources */,
-				9D775E981FCD6C0300B96803 /* home.storyboard in Resources */,
 				9D54B6441FCD0D2300F47122 /* Assets.xcassets in Resources */,
-				9D775E9B1FCD6C1400B96803 /* unique.storyboard in Resources */,
 				9D775E961FCD6BF400B96803 /* article.storyboard in Resources */,
 				9D54B6421FCD0D2300F47122 /* Main.storyboard in Resources */,
 			);
@@ -209,14 +197,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9D0BD6DA1FD990F80009D013 /* uniqueDetail.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D0BD6DB1FD990F80009D013 /* Base */,
-			);
-			name = uniqueDetail.storyboard;
-			sourceTree = "<group>";
-		};
 		9D54B6401FCD0D2300F47122 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -231,14 +211,6 @@
 				9D775E951FCD6BF400B96803 /* Base */,
 			);
 			name = article.storyboard;
-			sourceTree = "<group>";
-		};
-		9D775E991FCD6C1400B96803 /* unique.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D775E9A1FCD6C1400B96803 /* Base */,
-			);
-			name = unique.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

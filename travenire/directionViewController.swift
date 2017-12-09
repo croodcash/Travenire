@@ -9,19 +9,75 @@
 import UIKit
 import MapKit
 import CoreLocation
-class directionViewController: UIViewController,MKMapViewDelegate {
-
+class directionViewController: UIViewController,MKMapViewDelegate,UIPickerViewDataSource, UIPickerViewDelegate{
+    @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var direct: MKMapView!
     var locationManager = CLLocationManager()
     var loadingIndicator: LoadingIndicator!
     var coordinate: CLLocationCoordinate2D!
     var index: Int?
     var code: Int?
+    var pickerContent: [String] = []
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return appDelegate.foodStores.count + appDelegate.craftStores.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerContent[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        var found = false
+        for x in 0...appDelegate.foodStores.count-1{
+            if appDelegate.foodStores[x].name == pickerContent[row]{
+                index = x
+                code = appDelegate.foodStores[x].code
+                found = true
+            }
+        }
+        if !found{
+            for x in 0...appDelegate.craftStores.count-1{
+                if appDelegate.craftStores[x].name == pickerContent[row]{
+                    index = x
+                    code = appDelegate.craftStores[x].code
+                    found = true
+                }
+            }
+        }
+        startRoute()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         loadingIndicator = LoadingIndicator(usedView: self.view)
+        var idx = index! - 1
+        if code!<4{
+            for _ in 0...appDelegate.foodStores.count - 1{
+                idx += 1
+                if idx>2{
+                    idx = 0
+                }
+                pickerContent.append(appDelegate.foodStores[idx].name)
+            }
+            for x in appDelegate.craftStores{
+                pickerContent.append(x.name)
+            }
+        }else{
+            for _ in 0...appDelegate.foodStores.count - 1{
+                idx += 1
+                if idx>2{
+                    idx = 0
+                }
+                pickerContent.append(appDelegate.craftStores[idx].name)
+            }
+            for x in appDelegate.foodStores{
+                pickerContent.append(x.name)
+            }
+        }
+        loadingIndicator = LoadingIndicator(usedView: self.view)
         self.direct.showsUserLocation = true
         coordinate = CLLocationCoordinate2D()
         coordinate.latitude = (locationManager.location?.coordinate.latitude)!
@@ -34,6 +90,10 @@ class directionViewController: UIViewController,MKMapViewDelegate {
         
     }
     func startRoute() {
+        let anotations = self.direct.annotations
+        self.direct.removeAnnotations(anotations)
+        let overlays = self.direct.overlays
+        self.direct.removeOverlays(overlays)
         
         let sourceLocation = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         var destinationLocation: CLLocationCoordinate2D
