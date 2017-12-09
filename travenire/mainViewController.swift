@@ -30,16 +30,7 @@ class mainViewController: UIViewController {
     perform(#selector(self.loadSplashScreen), with: nil, afterDelay: 3)
     /* FINISHED LOADING SCREEN */
         
-    UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (didAllow, error) in
-        }
-        let content = UNMutableNotificationContent()
-        content.title = "Travenire"
-        content.subtitle = "Welcome to Bogor"
-        content.body = "here are special souvenir for you"
-        content.badge = 1
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false)
-        let request = UNNotificationRequest(identifier: "lala", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+   
         
         
     

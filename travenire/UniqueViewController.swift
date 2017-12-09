@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import MapKit
+import UserNotifications
 
 struct Unique {
     var code: Int
@@ -81,10 +82,19 @@ class UniqueViewController: UIViewController {
         data.append(Unique(code: 1, img: "Craft1" , type: "craft", cnt: 3))
         data.append(Unique(code: 2, img: "Craft2" , type: "craft", cnt: 3))
         data.append(Unique(code: 3, img: "Craft3" , type: "craft", cnt: 4))
-        
         slide()
-        
         add()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (didAllow, error) in
+        }
+        let content = UNMutableNotificationContent()
+        content.title = "Travenire"
+        content.subtitle = "Welcome to Bogor"
+        content.body = "there is a Souvenire Store nearby you... Check it out!"
+        content.badge = 1
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false)
+        let request = UNNotificationRequest(identifier: "lala", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         // Do any additional setup after loading the view.
     }
     func add(){
@@ -121,6 +131,7 @@ class UniqueViewController: UIViewController {
             return store1.dis < store2.dis
         }
     }
+    
     
     
 }
